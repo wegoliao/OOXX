@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* 設定棋盤和棋子的樣式 */
+        .cell {
+            height: 60px;
+            width: 60px;
+            border: 1px solid;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 60px;
+            cursor: pointer;
+        }
+
+        .cell.x::before {
+            content: "X";
+            color: green;
+        }
+
+        .cell.o::before {
+            content: "O";
+            color: red;
+        }
+    </style>
+    <script src="ticTacToe.js"></script>
+</head>
+<body>
+    <!-- 顯示棋盤 -->
+    <table id="board"></table>
+
+    <!-- 提供選擇遊戲模式的選項 -->
+    <button onclick="startGame(false)">兩位玩家對戰</button>
+    <button onclick="startGame(true)">與AI對戰</button>
+</body>
+</html>
